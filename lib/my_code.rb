@@ -9,5 +9,5 @@ when "returns an array with all values made negative" do
 when "returns an array with the original values" do
   dune = ["paul", "gurney", "vladimir", "jessica", "chani"]
   expect(map, dune)
-  
+
 end
