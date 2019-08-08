@@ -10,31 +10,26 @@ when "returns an array with the original values" do
   dune = ["paul", "gurney", "vladimir", "jessica", "chani"]
   expect(map, dune)
 
-  it "returns an array with the original values multiplied by 2" do
-    expect(map([1, 2, 3, -9]){|n| n * 2}).to eq([2, 4, 6, -18])
+when "returns an array with the original values multiplied by 2" do
+    expect(map, [1, 2, 3, -9])
+
+when "returns an array with the original values squared" do
+    expect(map, [1, 2, 3, -9])
   end
 
-  it "returns an array with the original values squared" do
-    expect(map([1, 2, 3, -9]){|n| n * n}).to eq([1, 4, 9, 81])
-  end
-  end
-
-  describe 'my own reduce' do
-  it "returns a running total when not given a starting point" do
+def 'my own reduce'
+when "returns a running total when not given a starting point" do
     source_array = [1,2,3]
-    expect(reduce(source_array){|memo, n| memo + n}).to eq(6)
-  end
+    expect(reduce, source_array)
 
-  it "returns a running total when given a starting point" do
+when "returns a running total when given a starting point" do
     source_array = [1,2,3]
     starting_point = 100
-    expect(reduce(source_array, starting_point){|memo, n| memo + n}).to eq(106)
-  end
+    expect(reduce(source_array, starting_point)
 
-  it "returns true when all values are truthy" do
+when "returns true when all values are truthy" do
     source_array = [1, 2, true, "razmatazz"]
-    expect(reduce(source_array){|memo, n| memo && n}).to be_truthy
-  end
+    expect(reduce, (source_array))
 
 when "returns false when any value is false" do
     source_array = [1, 2, true, "razmatazz", false]
